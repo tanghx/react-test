@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import confirm from './test/Modal';
-
+import InputNumber from './test/InputNumber'
 class App extends Component {
   constructor(props) {
     super(props)
@@ -28,8 +28,14 @@ class App extends Component {
   }
   
   render() {
+    const value = 1
     return (
-      <button onClick={this.confirmShow.bind(this)}>确定</button>
+      <div>
+        <button onClick={this.confirmShow.bind(this)}>确定</button>
+        <InputNumber defaultValue={value} onChange={e => {}} ></InputNumber>
+        <InputNumber value={value} onChange={e => {}} ></InputNumber>
+
+      </div>
     );
   }
 }
